@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://0jsj8gfsvd60"]
+
+[ext_resource type="Script" uid="uid://ikmwddk2hvij" path="res://understanding.gd" id="1_nhran"]
+[ext_resource type="Texture2D" uid="uid://cotjjeco28ogg" path="res://icon.svg" id="2_jhmwj"]
+[ext_resource type="Script" uid="uid://cch0dmqqmmx4q" path="res://icon.gd" id="3_wbbqc"]
+
+[node name="Understanding" type="Node2D" unique_id=1217296327]
+script = ExtResource("1_nhran")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=280836646]
+position = Vector2(508, 312)
+texture = ExtResource("2_jhmwj")
+script = ExtResource("3_wbbqc")
+
+[node name="Label" type="Label" parent="Icon" unique_id=1972774485]
+offset_left = -26.0
+offset_top = -90.0
+offset_right = 20.0
+offset_bottom = -67.0
+text = "asdfw"
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=334256172]
+position = Vector2(975, 485)
+texture = ExtResource("2_jhmwj")
+
+[node name="Label" type="Label" parent="Icon2" unique_id=359326315]
+offset_left = -24.0
+offset_top = -93.0
+offset_right = 16.0
+offset_bottom = -70.0
+text = "asd"
+
+[node name="Label" type="Label" parent="." unique_id=1669731434]
+offset_left = 953.0
+offset_top = 125.0
+offset_right = 993.0
+offset_bottom = 148.0
+text = "AQUI"
+
+[node name="Label2" type="Label" parent="." unique_id=907734080]
+offset_left = 955.0
+offset_top = 152.0
+offset_right = 995.0
+offset_bottom = 175.0
+text = "AQUI"
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1452392141]
+visible = false
+modulate = Color(1, 0, 0, 1)
+position = Vector2(1029, 795)
+texture = ExtResource("2_jhmwj")
+
+[node name="Label" type="Label" parent="Icon3" unique_id=1517533409]
+offset_left = -21.0
+offset_top = -90.0
+offset_right = 19.0
+offset_bottom = -67.0
