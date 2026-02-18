@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://brmkr7im7hldg"]
+
+[ext_resource type="Script" uid="uid://dukm0u6eh4qm0" path="res://orbit.gd" id="1_bxqu7"]
+[ext_resource type="Texture2D" uid="uid://cotjjeco28ogg" path="res://icon.svg" id="2_ihurt"]
+
+[node name="Orbit" type="Node2D" unique_id=853616154]
+script = ExtResource("1_bxqu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2024051598]
+position = Vector2(527, 324)
+texture = ExtResource("2_ihurt")
