@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://40pu45tpkf3r"]
+
+[ext_resource type="Texture2D" uid="uid://cotjjeco28ogg" path="res://icon.svg" id="1_mp0ej"]
+[ext_resource type="Script" uid="uid://b3cmi184ulkwn" path="res://flee_radius.gd" id="1_qb1uv"]
+
+[node name="FleeRadius" type="Node2D" unique_id=844998463]
+script = ExtResource("1_qb1uv")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1983910843]
+position = Vector2(596, 328)
+texture = ExtResource("1_mp0ej")
