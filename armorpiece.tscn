@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dg03t2ahd42q7"]
+
+[ext_resource type="Texture2D" uid="uid://dfawyeejhd2fk" path="res://armor.png" id="1_48w2i"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5adct"]
+polygon = PackedVector2Array(-11, -16, -16, -18, -18, -11, -17, -7, -12, -4, -7, 2, 0, 2, 1, -5, 0, -11, 5, -17, 4, -19, 1, -19, -5, -19, -9, -17)
+
+[node name="ArmorPiece" type="Sprite2D" unique_id=2092933585]
+scale = Vector2(2, 2)
+texture = ExtResource("1_48w2i")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=531386087]
+position = Vector2(6, 8)
+occluder = SubResource("OccluderPolygon2D_5adct")

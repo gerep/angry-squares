@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4lvbpkrdyr62"]
+
+[ext_resource type="Script" uid="uid://dojfrd73eq8qw" path="res://wander.gd" id="1_dsosc"]
+[ext_resource type="Texture2D" uid="uid://cotjjeco28ogg" path="res://icon.svg" id="1_g1y5l"]
+
+[node name="Wander" type="Node2D" unique_id=1141876680]
+script = ExtResource("1_dsosc")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=393784575]
+position = Vector2(578, 343)
+texture = ExtResource("1_g1y5l")

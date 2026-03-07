@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t0ueo23iw43e" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://c4pu0vtihd55g" path="res://enemy.png" id="1_7k104"]
+[ext_resource type="PackedScene" uid="uid://dg03t2ahd42q7" path="res://armorpiece.tscn" id="3_qi2p4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
 size = Vector2(128, 128)
@@ -15,6 +16,17 @@ radius = 103.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_iifgy"]
 radius = 101.0198
 
+[sub_resource type="Gradient" id="Gradient_6ep66"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4gyqm"]
+gradient = SubResource("Gradient_6ep66")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9342583, 0.05631701)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=735752258]
 script = ExtResource("1_4gyqm")
 
@@ -27,6 +39,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=160104843]
+visible = false
 texture = ExtResource("1_7k104")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2015597409]
@@ -46,7 +59,30 @@ visible = false
 shape = SubResource("CircleShape2D_qi2p4")
 
 [node name="EvadeArea" type="Area2D" parent="." unique_id=530408202]
+visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EvadeArea" unique_id=82772329]
 shape = SubResource("CircleShape2D_iifgy")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1048627421]
+energy = 3.68
+shadow_enabled = true
+shadow_filter_smooth = 44.1
+texture = SubResource("GradientTexture2D_4gyqm")
+
+[node name="ArmorPiece2" parent="." unique_id=1165775252 instance=ExtResource("3_qi2p4")]
+position = Vector2(-16.999998, 25)
+rotation = -2.1537364
+
+[node name="ArmorPiece5" parent="." unique_id=2092933585 instance=ExtResource("3_qi2p4")]
+position = Vector2(-32, -19)
+rotation = 1.2007865
+
+[node name="ArmorPiece3" parent="." unique_id=1360855814 instance=ExtResource("3_qi2p4")]
+position = Vector2(34.999996, 31.000004)
+rotation = 0.143117
+
+[node name="ArmorPiece4" parent="." unique_id=1552520069 instance=ExtResource("3_qi2p4")]
+position = Vector2(26.999996, -25)
+rotation = -1.6179202

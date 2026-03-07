@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ccgn7ps0kd6yg"]
+
+[ext_resource type="PackedScene" uid="uid://dg03t2ahd42q7" path="res://armorpiece.tscn" id="2_6ep66"]
+
+[sub_resource type="Gradient" id="Gradient_6ep66"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_78uhm"]
+gradient = SubResource("Gradient_6ep66")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7941176, 0.07125675)
+
+[node name="Defector" type="Node2D" unique_id=536049201]
+
+[node name="Occluder" parent="." unique_id=2092933585 instance=ExtResource("2_6ep66")]
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1480422852]
+texture = SubResource("GradientTexture2D_78uhm")

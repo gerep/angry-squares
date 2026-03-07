@@ -11,6 +11,8 @@ enum STATES { HUNTING, INFIGHTING, EVADING }
 var max_speed: float = 100.0
 var max_steer_force: float = 10.0
 var separation_weight: float = 1000.0
+var evade_weight: float = 100.0
+var max_evade_force: float = 200.0
 var slowing_radius: float = 400.0
 var target_position: Vector2
 var infight_target: Node2D
@@ -44,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 	var separation_steering: Vector2 = _calculate_separation()
 	var evade_steering: Vector2 = _calculate_evade()
 	var total_steering: Vector2 = (
-		seek_steering + separation_steering * separation_weight + evade_steering
+		seek_steering + (separation_steering * separation_weight) + evade_steering
 	)
 
 	velocity += total_steering
@@ -95,7 +97,7 @@ func _calculate_evade() -> Vector2:
 
 	var desired_velocity: Vector2 = evade_direction * max_speed
 	var steering: Vector2 = desired_velocity - velocity
-	return steering.limit_length(max_steer_force)
+	return steering.limit_length(max_evade_force)
 
 
 func _on_collision_area_body_entered(body: Node2D) -> void:
